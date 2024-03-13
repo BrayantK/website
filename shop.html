@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- ===============FONT AWESOME============ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/latest/css/all.min.css"
+    />
+
+    <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="Assets/css/swiper-bundle.min (1).css" />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="Assets/css/styles.css" />
+    <link rel="stylesheet" href="Assets/css/color-1.css" />
+
+    <title>Galaxy Technologies</title>
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <head class="header" id="header">
+      <nav class="nav container">
+        <a href="index.html" class="nav_logo">
+          <i class="bx bxs-shopping-bags nav_logo-icon"></i> Galaxy Technologies
+        </a>
+        <div class="nav_menu" id="nav-menu">
+          <ul class="nav_list">
+            <li class="nav_item">
+              <a href="index.html" class="nav_link">Home</a>
+            </li>
+
+            <li class="nav_item">
+              <a href="shop.html" class="nav_link active-link">Shop</a>
+            </li>
+
+            <li class="nav_item">
+              <a href="cart.html" class="nav_link">Cart</a>
+            </li>
+
+            <li class="nav_item">
+              <a href="blog.html" class="nav_link">Blog</a>
+            </li>
+
+            <li class="nav_item">
+              <a href="faq.html" class="nav_link">FAQ's</a>
+            </li>
+
+            <li class="nav_item">
+              <a href="contact.html" class="nav_link">Contact</a>
+            </li>
+          </ul>
+
+          <div class="nav_close" id="nav-close">
+            <i class="bx bx-x"></i>
+          </div>
+        </div>
+
+        <div class="nav_btns">
+          <div class="login_toggle" id="login-button">
+            <i class="bx bx-user"></i>
+          </div>
+
+          <div class="nav_shop" id="cart-shop">
+            <i class="bx bx-shopping-bag"></i>
+          </div>
+
+          <div class="nav_toggle" id="nav-toggle">
+            <i class="bx bx-grid-alt"></i>
+          </div>
+        </div>
+      </nav>
+    </head>
+
+    <!--=============== CART ===============-->
+    <div class="cart" id="cart">
+      <i class="bx bx-x cart_close" id="cart-close"></i>
+      <h2 class="cart_title-center">My Cart</h2>
+
+      <div class="cart_container">
+        <article class="cart_card">
+          <div class="cart_box">
+            <img src="Assets/img/mac book.png" alt="" class="cart_img" />
+          </div>
+
+          <div class="cart_details">
+            <h3 class="cart_title">Macbook</h3>
+            <span class="cart_price">$12</span>
+
+            <div class="cart_amount">
+              <div class="cart_amount-content">
+                <span class="cart_amount-box">
+                  <i class="bx bx-minus"></i>
+                </span>
+
+                <span class="cart_amount-number">1</span>
+
+                <span class="cart_amount-box">
+                  <i class="bx bx-plus"></i>
+                </span>
+              </div>
+
+              <i class="bx bx-trash-alt cart_amount-trash"></i>
+            </div>
+          </div>
+        </article>
+
+        <article class="cart_card">
+          <div class="cart_box">
+            <img
+              src="Assets/img/projector without backgr.png"
+              alt=""
+              class="cart_img"
+            />
+          </div>
+
+          <div class="cart_details">
+            <h3 class="cart_title">Printer</h3>
+            <span class="cart_price">$12</span>
+
+            <div class="cart_amount">
+              <div class="cart_amount-content">
+                <span class="cart_amount-box">
+                  <i class="bx bx-minus"></i>
+                </span>
+
+                <span class="cart_amount-number">1</span>
+
+                <span class="cart_amount-box">
+                  <i class="bx bx-plus"></i>
+                </span>
+              </div>
+
+              <i class="bx bx-trash-alt cart_amount-trash"></i>
+            </div>
+          </div>
+        </article>
+
+        <article class="cart_card">
+          <div class="cart_box">
+            <img
+              src="Assets/img/printer without bg.png"
+              alt=""
+              class="cart_img"
+            />
+          </div>
+
+          <div class="cart_details">
+            <h3 class="cart_title">Printer</h3>
+            <span class="cart_price">$12</span>
+
+            <div class="cart_amount">
+              <div class="cart_amount-content">
+                <span class="cart_amount-box">
+                  <i class="bx bx-minus"></i>
+                </span>
+
+                <span class="cart_amount-number">1</span>
+
+                <span class="cart_amount-box">
+                  <i class="bx bx-plus"></i>
+                </span>
+              </div>
+
+              <i class="bx bx-trash-alt cart_amount-trash"></i>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="cart_prices">
+        <span class="cart_prices-item">3 item</span>
+        <span class="cart_prices-total">$36</span>
+      </div>
+    </div>
+
+    <!--=============== LOGIN ===============-->
+    <div class="login" id="login">
+      <i class="bx bx-x login_close" id="login-close"></i>
+
+      <h2 class="login_title-center">Login</h2>
+
+      <form action="" class="login_form grid">
+        <div class="login_content">
+          <label for="" class="login_label">Email</label>
+          <input type="email" class="login_input" />
+        </div>
+
+        <div class="login_content">
+          <label for="" class="login_label">Password</label>
+          <input type="password" class="login_input" />
+        </div>
+
+        <div>
+          <a href="#" class="button">Sign in</a>
+        </div>
+
+        <div>
+          <p class="signup">
+            Not a member?
+            <a href="registration.html"> <span>Sign Up Now</span></a>
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <!--=============== MAIN ===============-->
+    <main class="main">
+      <!--=============== SHOP ===============-->
+      <section class="shop section container">
+        <h2 class="breadcrumb_title">Shop Page</h2>
+        <h3 class="breadcrumb_subtitle">Home > <span>Shop</span></h3>
+
+        <div class="shop_container grid">
+          <div class="sidebar">
+            <h3 class="filter_title">Select Filters</h3>
+            <div class="filter_content">
+              <h3 class="filter_subtitle">Condition</h3>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>New</p>
+                <span>(13)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Refurbrished</p>
+                <span>(13)</span>
+              </div>
+            </div>
+            <br />
+
+            <div class="filter_content">
+              <h3 class="filter_subtitle">Laptops</h3>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>HP Laptop</p>
+                <span>(13)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Dell Laptop</p>
+                <span>(15)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>ASUS Laptop</p>
+                <span>(6)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>ACER Laptop</p>
+                <span>(6)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Macbook Laptop</p>
+                <span>(6)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Lenovo Laptop</p>
+                <span>(6)</span>
+              </div>
+            </div>
+            <br />
+
+            <div class="filter_content">
+              <h3 class="filter_subtitle">DESKTOPS</h3>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>HP Desktop</p>
+                <span>(2)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Dell Desktop</p>
+                <span>(4)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Lenovo Desktop</p>
+                <span>(6)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Others</p>
+                <span>(4)</span>
+              </div>
+            </div>
+            <br />
+
+            <div class="filter_content">
+              <h3 class="filter_subtitle">PRINTERS</h3>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>HP Printer</p>
+                <span>(2)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>CANON Printer</p>
+                <span>(4)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>EPSON Printer</p>
+                <span>(6)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>KYOCERA Printer</p>
+                <span>(6)</span>
+              </div>
+            </div>
+            <br />
+
+            <div class="filter_content">
+              <h3 class="filter_subtitle">ACCESSORY</h3>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Mouse</p>
+                <span>(2)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Keyboards</p>
+                <span>(4)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Rams</p>
+                <span>(6)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Laptop Stands</p>
+                <span>(6)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Harddisk</p>
+                <span>(6)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Solid state disks</p>
+                <span>(6)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Wi-Fi Repeaters</p>
+                <span>(6)</span>
+              </div>
+
+              <div class="filter">
+                <input type="checkbox" name="" id="" />
+                <p>Other Accessory</p>
+                <span>(6)</span>
+              </div>
+
+              <div class="filter_content">
+                <h3 class="filter_subtitle">CCTV</h3>
+  
+                <div class="filter">
+                  <input type="checkbox" name="" id="" />
+                  <p>Hikvision cctv</p>
+                  <span>(2)</span>
+                </div>
+
+                <div class="filter">
+                  <input type="checkbox" name="" id="" />
+                  <p>Axis cctv</p>
+                  <span>(2)</span>
+                </div>
+
+                <div class="filter">
+                  <input type="checkbox" name="" id="" />
+                  <p>Huawei cctv</p>
+                  <span>(2)</span>
+                </div>
+
+                <div class="filter">
+                  <input type="checkbox" name="" id="" />
+                  <p>Dahua cctv</p>
+                  <span>(2)</span>
+                </div>
+
+                <div class="filter_content">
+                  <h3 class="filter_subtitle">MONITORS</h3>
+    
+                  <div class="filter">
+                    <input type="checkbox" name="" id="" />
+                    <p>TWO-IN ONE Monitor</p>
+                    <span>(2)</span>
+                  </div>
+
+                  <div class="filter">
+                    <input type="checkbox" name="" id="" />
+                    <p>Dell Monitor</p>
+                    <span>(2)</span>
+                  </div>
+
+                  <div class="filter">
+                    <input type="checkbox" name="" id="" />
+                    <p>HP Monitor</p>
+                    <span>(2)</span>
+                  </div>
+
+                  <div class="filter">
+                    <input type="checkbox" name="" id="" />
+                    <p>ACER Monitor</p>
+                    <span>(2)</span>
+                  </div>
+
+                  <div class="filter">
+                    <input type="checkbox" name="" id="" />
+                    <p>Lenovo Monitor</p>
+                    <span>(2)</span>
+                  </div><br/>
+
+
+          <div class="shop_items grid">
+            <div class="shop_content">
+              <div class="shop_tag">Refurbrished</div>
+              <img
+                src="Assets/img/dell xps 15.jpeg"
+                alt="dell xps"
+                class="shop_img"
+              />
+              <h3 class="shop_title">Dell XPS</h3>
+              <span class="shop_subtitle">Accessory</span>
+
+              <div class="shop_prices">
+                <span class="shop_price">$14.99</span>
+                <span class="shop_discounts">$29.99</span>
+              </div>
+
+              <a href="details.html" class="button shop_button">
+                <i class="bx bx-cart-alt shop_icon"></i>
+              </a>
+            </div>
+
+            <div class="shop_content">
+              <div class="shop_tag">New</div>
+              <img
+                src="Assets/img/tp m7200.png"
+                alt="tp m7200"
+                class="shop_img"
+              />
+              <h3 class="shop_title">
+                TP-LINK M7200 4G LTE MiFi Portable Wi-Fi Router 8 Hours Long
+                Lasting Battery
+              </h3>
+              <span class="shop_subtitle">Accessory</span>
+
+              <div class="shop_prices">
+                <span class="shop_price">Ksh 6,500</span>
+                <span class="shop_discounts">Ksh 8,125</span>
+              </div>
+
+              <a href="details.html" class="button shop_button">
+                <i class="bx bx-cart-alt shop_icon"></i>
+              </a>
+            </div>
+
+            <div class="shop_content">
+              <div class="shop_tag">New</div>
+              <img
+                src="Assets/img/asus zenbook flip 14.png"
+                alt="asus zenbook flip 14"
+                class="shop_img"
+              />
+              <h3 class="shop_title">ASUS Zenbook Flip 14 i7 12th gen</h3>
+              <span class="shop_subtitle">ASUS Laptop</span>
+
+              <div class="shop_prices">
+                <span class="shop_price">Ksh 170,000</span>
+                <span class="shop_discounts">KSH 212,500</span>
+              </div>
+
+              <a href="details.html" class="button shop_button">
+                <i class="bx bx-cart-alt shop_icon"></i>
+              </a>
+            </div>
+
+            <div class="shop_content">
+              <div class="shop_tag">New</div>
+              <img
+                src="Assets/img/hp-z27q-g3-qhd-display.jpg"
+                alt="hp-z27q-g3-qhd-displaY"
+                class="shop_img"
+              />
+              <h3 class="shop_title">HP-z27q-G3-QHD-display</h3>
+              <span class="shop_subtitle">HP Laptop</span>
+
+              <div class="shop_prices">
+                <span class="shop_price">Ksh 45,000</span>
+                <span class="shop_discounts">KSH 56,250</span>
+              </div>
+
+              <a href="details.html" class="button shop_button">
+                <i class="bx bx-cart-alt shop_icon"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--=============== FOOTER ===============-->
+    <footer class="footer section">
+      <div class="footer_container container grid">
+        <!-- Footer Content 1-->
+        <div class="footer_content">
+          <a href="#" class="footer_logo">
+            <i class="bx bxs-shopping-bags footer_logo-icon"></i>Galaxy
+            Technologies
+          </a>
+
+          <p class="footer_description">
+            Enjoy the biggest sale <br />of your life.
+          </p>
+
+          <div class="footer_social">
+            <a
+              href="mailto:brayokinyua010@gmail.com"
+              class="footer_social-link"
+              target="target_blank"
+              ><i class="bx bx-envelope"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/greatgreggor?igsh=MWoyeml0djAwbzQzdw=="
+              class="footer_social-link"
+              target="target_blank"
+              ><i class="bx bxl-instagram"></i
+            ></a>
+            <a
+              href="https://twitter.com/home"
+              class="footer_social-link"
+              target="target_blank"
+              ><i class="bx bxl-twitter"></i
+            ></a>
+            <a
+              href="https://wa.me/+254723361870"
+              class="footer_social-link"
+              target="target_blank"
+              ><i class="bx bxl-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+        <!--Footer Content 2-->
+        <div class="footer_content">
+          <h3 class="footer_title">About</h3>
+
+          <ul class="footer_links">
+            <li><a href="#" class="footer_link">About Us</a></li>
+            <li><a href="#" class="footer_link">Customer Support</a></li>
+            <li><a href="#" class="footer_link">Support Center</a></li>
+          </ul>
+        </div>
+
+        <!--Footer Content 3-->
+        <div class="footer_content">
+          <h3 class="footer_title">Our Services</h3>
+
+          <ul class="footer_links">
+            <li><a href="#" class="footer_link">Shop</a></li>
+            <li><a href="#" class="footer_link">BackUp</a></li>
+            <li><a href="#" class="footer_link">Discounts</a></li>
+            <li><a href="#" class="footer_link">Networking</a></li>
+            <li><a href="#" class="footer_link">ICT Audit</a></li>
+            <li><a href="#" class="footer_link">Shipping Mode</a></li>
+            <li><a href="#" class="footer_link">Email Management</a></li>
+            <li><a href="#" class="footer_link">CCTV Installation</a></li>
+            <li>
+              <a href="#" class="footer_link">Internet Security Management</a>
+            </li>
+            <li>
+              <a href="#" class="footer_link">ICT Consultancy & IT Support</a>
+            </li>
+            <li>
+              <a href="#" class="footer_link"
+                >Computer & Printer maintenance, repairs</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!--Footer Content 4-->
+        <div class="footer_content">
+          <h3 class="footer_title">Our Company</h3>
+
+          <ul class="footer_links">
+            <li><a href="#" class="footer_link">Register</a></li>
+            <li><a href="#" class="footer_link">Contact Us</a></li>
+            <li><a href="#" class="footer_link">About Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <span class="footer_copy-link">
+        Created By Brayant Kabugua
+        <a
+          href="https://wa.me/+254702185727"
+          class="footer_social-link"
+          target="target_blank"
+          ><i class="bx bxl-whatsapp"></i></a
+      ></span>
+      <span class="footer_copy"
+        >&#169; Galaxy Technologies. All rights reserved</span
+      >
+    </footer>
+
+    <!--=============== SCROLL UP ===============-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="bx bx-up-arrow-alt scrollup_icon"></i>
+    </a>
+
+    <!--=============== STYLE SWITCHER ===============-->
+
+    <!--=============== SWIPER JS ===============-->
+    <script src="Assets/js/swiper-bundle.min.js"></script>
+
+    <!--=============== JS ===============-->
+    <script src="Assets/js/main.js"></script>
+  </body>
+</html>
