@@ -103,7 +103,36 @@ window.addEventListener('scroll',scrollUp)
 
 
 /*=============== QUESTIONS ACCORDION ===============*/
+const accordionItem = document.querySelectorAll('.questions_item')
 
+accordionItem.forEach((item) => { 
+  const accordionHeader = item.querySelector('.questions_header')
+
+  accordionHeader.addEventListener('click' , () => {
+    const openItem =document.querySelector('.accordion-open')
+
+    toggleItem(item)
+
+    if(openItem && openItem !== item) {
+      toggleItem(openItem)
+    }
+  })
+
+})
+
+const toggleItem = (item) => {
+  const accordionContent = item.querySelector('.questions_content')
+
+  if(item.classList.contains('accordion-open')){
+    accordionContent.removeAttribute('style')
+    item.classList.remove('accordion-open')
+  }
+  else{
+    accordionContent.style.height = `${accordionContent.scrollHeight}px`
+    item.classList.add('accordion-open')
+  }
+
+}
 
 /*=============== STYLE SWITCHER ===============*/
 
