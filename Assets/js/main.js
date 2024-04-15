@@ -100,6 +100,12 @@ window.addEventListener('scroll',scrollUp)
 
 
 /*=============== LIGHT BOX ===============*/
+// if (productItems[itemIndex].querySelector(".product_img img")) {
+//   const imgSrc = productItems[itemIndex].querySelector(".product_img img").getAttribute("src");
+//   lightboxImg.src = imgSrc;
+// } else {
+//   // Handle the case where the image is missing (e.g., display a placeholder)
+// }
 
 
 /*=============== QUESTIONS ACCORDION ===============*/
@@ -135,5 +141,38 @@ const toggleItem = (item) => {
 }
 
 /*=============== STYLE SWITCHER ===============*/
+const styleSwitcherToggle = document.querySelector(".style_switcher-toggler");
+styleSwitcherToggle.addEventListener("click", () =>{
+  document.querySelector(".style_switcher").classList.toggle("open");
+})
+
+//Hide Style switcher on scroll
+window.addEventListener("scroll", () => {
+  if(document.querySelector(".style_switcher").classList.contains("open")) {
+    document.querySelector(".style_switcher").classList.remove("open");
+  }
+})
+
+//THEME COLORS
+function themeColors() {
+  const colorStyle = document.querySelector(".js-color-style"),
+       themeColorsContainer = document.querySelector(".js-theme-colors");
+
+  themeColorsContainer.addEventListener("click", ({ target }) => {
+    if (target.classList.contains("js-theme-color-item")) {
+      localStorage.setItem("color", target.getAttribute("data-js-theme-color"));
+      setColors();
+    }
+  });
+
+  function setColors() {
+    let path = colorStyle.getAttribute("href").split("/");
+    path = path.slice(0, path.length - 1); // Remove the last element
+    colorStyle.setAttribute("href", path.join("/") + "/" + localStorage.getItem("color") + ".css");
+    console.log(path);
+  }
+}
+
+themeColors();
 
 

@@ -110,7 +110,7 @@ body{
 
  /*===reusable css classes===*/
  .section{
-    padding: 7rem 0 2rem;
+    padding: 2rem 0 2rem;
  }
 
  .section_title,
@@ -1351,18 +1351,231 @@ body{
     right: 0;
 }
 /*==========LightBox=========*/
+.lightbox{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    z-index: var(--z-fixed);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    padding: 1.8rem;
+}
+
+.lightbox_img{
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 450px;
+    cursor: pointer;
+    background-color: var(--container-color);
+    display: block;
+    padding: .6rem;
+}
+
+.lightbox_content{
+    position: relative;
+}
+
+.lightbox_close:hover{
+    transform: scale(1.1);
+}
+.lightbox_close:active{
+    transform: scale(1);
+}
+
+.lightbox_close{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    top: -2.6rem;
+    right: 0;
+    font-size: 2rem;
+    color: rgb(229, 108, 108);
+    text-align: right;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.lightbox_caption{
+    position: absolute;
+    left: 0;
+    bottom: -2.2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--normal-font-size);
+    color:#c0ace4;
+    font-weight: var(--font-medium);
+    z-index: -1;
+}
+
+.lightbox_controls .prev_item,
+.lightbox_controls .next_item{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #d5cee0;
+    color: var(--title-color);
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    top: 50%;
+    margin-top: -20px;
+    z-index: 110;
+    transition: all 0.3s ease;
+}
+
+.lightbox_controls .prev_item:hover,
+.lightbox_controls .next_item:hover{
+    transform:scale(1.1);
+}
+
+.lightbox_controls .prev_item:active,
+.lightbox_controls .next_item:active{
+    transform:scale(1);
+}
+
+
+.lightbox_controls .prev_item{
+    left: 1.8rem;
+}
+
+.lightbox_controls .next_item{
+    right: 1.8rem;
+}
+
+.lightbox_controls .prev_item .bx,
+.lightbox_controls .next_item .bx{
+    font-size: 2rem;
+    line-height: 40px;
+}
 
 /* Lightbox open*/
+.lightbox.open {
+    display: flex;
+}
 
 /* Lightbox open animation*/
+.lightbox.open .lightbox_content{
+    animation: lightboxImage .5s ease;
+}
+
+@keyframes lightboxImage{
+    0% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
 
 /*==========Style Switcher=========*/
+.style_switcher {
+    position:fixed;
+    right: 0;
+    top: 26%;
+    width: 200px;
+    z-index: var(--z-tooltip);
+    background-color: var(--container-color);
+    padding: 1rem;
+    box-shadow: -0.5px 0.5px 4px var(--shadow);
+    border-radius: .2rem;
+    transform: translateX(100%);
+    transition: .3s;
+}
+
+.style_switcher .s_icon{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 1.25rem;
+    color: var(--title-color);
+    background-color: var(--container-color);
+    right: 100%;
+    margin-right: 1.8rem;
+    cursor: pointer;
+    border-radius: 50%;
+    line-height: 45px;
+    top: 0;
+}
+
+.style_switcher h4{
+    margin-bottom: var(--mb-1);
+    color: var(--title-color);
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-bold);
+    text-transform: capitalize;
+}
+
+.style_switcher .theme_colors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.style_switcher .theme_colors button{
+    height: 30px;
+    width: 30px;
+    position: relative;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.style_switcher .theme_colors button i{
+    color: #fff;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.style_switcher .color-1{
+    background-color: hsl(0, 88%, 61%);
+}
+
+.style_switcher .color-2{
+    background-color: hsl(260, 88%, 61%);
+}
+
+.style_switcher .color-3{
+    background-color: hsl(336, 88%, 61%);
+}
+
+.style_switcher .color-4{
+    background-color: hsl(284, 88%, 61%);
+}
+
+.style_switcher .color-5{
+    background-color: hsl(375, 88%, 61%);
+}
+
+.style_switcher .color-6{
+    background-color:hsl(279, 18%, 52%);
+}
+
+
 
 /* Style switcher open */
-
+.style_switcher.open {
+    transform: translateX(-10px);
+}
 
 /* Active theme color */
-
+.style_switcher .theme_colors button.active i{
+    display: block;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
